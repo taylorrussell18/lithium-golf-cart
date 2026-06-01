@@ -11,7 +11,7 @@ const reviews = [
     name: "Mike T.",
     location: "Eufaula, OK",
     stars: 5,
-    text: "These guys did an amazing job. Came out to my house, had the whole thing done in a few hours. Cart runs better than it ever did with the old lead-acid. Wish I had done this years ago.",
+    text: "Gary did an amazing job. Came out to my house, had the whole thing done in a few hours. Cart runs better than it ever did with the old lead-acid. Wish I had done this years ago.",
     cart: "EZGO TXT",
   },
   {
