@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-[#3b82f6]/8 blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full bg-[#22d3ee]/5 blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-24 sm:pt-0">
         <div className="inline-flex items-center gap-2 bg-[#22d3ee]/15 border border-[#22d3ee]/30 text-[#22d3ee] text-xs font-inter font-semibold tracking-[0.2em] uppercase px-4 py-2 rounded-full mb-8">
           <span>Premium Mobile Service</span>
         </div>
