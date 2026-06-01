@@ -4,29 +4,28 @@ import { useEffect, useRef, useState } from "react";
 
 const benefits = [
   {
-    icon: "💸",
     title: "No More Buying Batteries Every Year",
     desc: "Lead-acid batteries need replacement every 2–4 years. LiFePO4 lasts a decade or more with proper care.",
   },
   {
-    icon: "📅",
-    title: "2–3× Longer Lifespan",
+    title: "2–3x Longer Lifespan",
     desc: "Lithium cells deliver 2,000–3,000+ charge cycles vs. 500–700 for lead-acid — a dramatic difference in long-term value.",
   },
   {
-    icon: "🔌",
+    title: "50-Mile Charge Range",
+    desc: "Get up to 50 miles of range per charge — more than enough for a full day of riding, hauling, or work.",
+  },
+  {
     title: "More Power & Better Performance",
     desc: "Consistent voltage throughout the charge means full power from start to finish, not a fade at the end of the round.",
   },
   {
-    icon: "🪶",
-    title: "Lightweight = Better Ride & Speed",
+    title: "Lightweight — Better Ride & Speed",
     desc: "Lithium packs weigh roughly 60% less than lead-acid, reducing strain on the motor and improving hill-climbing ability.",
   },
   {
-    icon: "🔁",
-    title: "Plug In and Go",
-    desc: "Smarter charging, no water maintenance, no sulfation — just plug in overnight and you're ready to roll.",
+    title: "Plug In and Go — Super Simple",
+    desc: "No water maintenance, no sulfation, no equalizing charges. Just plug in overnight and you're ready to roll.",
   },
 ];
 
@@ -54,10 +53,10 @@ function FadeInCard({ children, delay = 0 }: { children: React.ReactNode; delay?
   );
 }
 
-function BenefitCard({ icon, title, desc }: { icon: string; title: string; desc: string }) {
+function BenefitCard({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="group h-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#22d3ee]/40 rounded-xl p-7 transition-all duration-300 cursor-default">
-      <div className="text-4xl mb-5">{icon}</div>
+      <div className="w-8 h-0.5 bg-[#22d3ee] mb-5" />
       <h3 className="font-playfair text-white text-xl font-semibold mb-3 leading-snug">{title}</h3>
       <p className="font-inter text-white/60 text-sm leading-relaxed">{desc}</p>
     </div>
@@ -81,15 +80,8 @@ export default function WhyUpgrade() {
         </FadeInCard>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {benefits.slice(0, 3).map((b, i) => (
+          {benefits.map((b, i) => (
             <FadeInCard key={b.title} delay={i * 100}>
-              <BenefitCard {...b} />
-            </FadeInCard>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 lg:max-w-2xl lg:mx-auto">
-          {benefits.slice(3).map((b, i) => (
-            <FadeInCard key={b.title} delay={(i + 3) * 100}>
               <BenefitCard {...b} />
             </FadeInCard>
           ))}

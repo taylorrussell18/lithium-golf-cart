@@ -7,9 +7,11 @@ import Image from "next/image";
 // Name them install-1.jpg, install-2.jpg, etc. and add them to this array.
 // Supported formats: .jpg, .jpeg, .png, .webp
 const photos: { src: string; alt: string }[] = [
+  { src: "/installs/install-completed-conversion.jpeg", alt: "Completed lithium conversion — XRH battery and smart charger installed" },
   { src: "/installs/install-battery-and-charger.jpeg", alt: "Lithium battery and smart charger mounted in golf cart floor" },
   { src: "/installs/install-lcd-monitor.jpeg", alt: "Smart battery LCD monitor installed in dash showing 72% charge" },
   { src: "/installs/install-charging-port.jpeg", alt: "External charging port installed on cart body" },
+  { src: "/installs/before-lead-acid-batteries.jpeg", alt: "Original lead-acid battery pack before conversion" },
   { src: "/installs/charger-specs.png", alt: "Smart charger — 0 to 100% in under 5.5 hours" },
   { src: "/installs/battery-specs.png", alt: "LiFePO4 105Ah battery — 6000+ cycle lifespan" },
 ];

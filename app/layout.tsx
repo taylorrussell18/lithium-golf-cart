@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Mobile Golf Carts | Lithium Conversion Service",
   description:
-    "Professional mobile golf cart lithium battery conversion. 36V LiFePO4 installed at your location. $1,600 all-in — parts, labor, charger, and monitor included.",
+    "Professional mobile golf cart lithium battery conversion. 36V LiFePO4 105Ah installed at your location. Starting at $1,600 — parts, labor, charger, and monitor included.",
   keywords: "golf cart lithium battery, lithium conversion, EZGO, Club Car, Yamaha, LiFePO4, mobile installation",
 };
 

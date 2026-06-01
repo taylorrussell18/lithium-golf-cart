@@ -91,13 +91,23 @@ export default function WhatsIncluded() {
         </div>
 
         <FadeInItem delay={500}>
-          <div className="mt-12 text-center bg-[#0f2744] rounded-2xl p-8 text-white">
-            <p className="font-playfair text-2xl sm:text-3xl font-bold mb-2">
-              All of this for <span className="text-[#22d3ee]">$1,600</span>
+          <div className="mt-12 bg-[#0f2744] rounded-2xl p-8 text-white">
+            <p className="font-playfair text-xl sm:text-2xl font-bold mb-6 text-center">
+              Battery Specifications
             </p>
-            <p className="font-inter text-white/60 text-sm sm:text-base">
-              Parts, labor, charger, and monitor — no hidden fees, no surprises.
-            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+              {[
+                { value: "105 Ah", label: "Amp Hours" },
+                { value: "50 mi", label: "Charge Range" },
+                { value: "4,032 Wh", label: "Energy Capacity" },
+                { value: "6,000+", label: "Cycle Life" },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-white/5 rounded-xl p-4 border border-white/10">
+                  <p className="font-playfair text-[#22d3ee] text-2xl font-bold mb-1">{stat.value}</p>
+                  <p className="font-inter text-white/50 text-xs uppercase tracking-widest">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </FadeInItem>
       </div>
