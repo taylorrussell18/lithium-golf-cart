@@ -41,7 +41,7 @@ export default function Hero() {
         </h1>
 
         <p className="font-inter text-xl sm:text-2xl md:text-3xl text-white/80 font-light mb-4 tracking-wide">
-          Starting at $1,600 Installed &nbsp;•&nbsp; We Come To You
+          Starting at $1,600 Installed &nbsp;•&nbsp; We Come To Your Home, Business, or Storage Unit
         </p>
         <p className="font-inter text-white/50 text-base sm:text-lg mb-12 max-w-xl mx-auto leading-relaxed">
           Full lithium upgrade including battery, custom tray, smart charger, and

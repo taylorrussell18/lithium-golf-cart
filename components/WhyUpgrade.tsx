@@ -8,8 +8,8 @@ const benefits = [
     desc: "Lead-acid batteries need replacement every 2–4 years. LiFePO4 lasts a decade or more with proper care.",
   },
   {
-    title: "2–3x Longer Lifespan",
-    desc: "Lithium cells deliver 2,000–3,000+ charge cycles vs. 500–700 for lead-acid — a dramatic difference in long-term value.",
+    title: "6,000+ Cycle Lifespan",
+    desc: "Our LiFePO4 batteries are rated for 6,000+ charge cycles vs. 500–700 for lead-acid — a dramatic difference in long-term value.",
   },
   {
     title: "50-Mile Charge Range",

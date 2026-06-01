@@ -71,7 +71,7 @@ export default function Pricing() {
                 Most installs completed in 1 day
               </span>
               <span className="bg-[#22d3ee]/15 border border-[#22d3ee]/30 text-[#22d3ee] font-inter text-xs font-semibold px-4 py-2 rounded-full tracking-wide">
-                We come to you
+                We come to your home, business, or storage unit
               </span>
             </div>
 

@@ -24,7 +24,7 @@ export default function Footer() {
               <li>Smart Charger Installation</li>
               <li>LCD Battery Monitor Setup</li>
               <li>Custom Battery Tray Fab</li>
-              <li>Mobile — We Come To You</li>
+              <li>Mobile — We Come To Your Home, Business, or Storage Unit</li>
             </ul>
           </div>
 
