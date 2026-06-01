@@ -9,21 +9,21 @@ const GOOGLE_REVIEW_URL = "https://g.page/r/YOUR_GOOGLE_PLACE_ID/review"; // ←
 const reviews = [
   {
     name: "Mike T.",
-    location: "Sun City, AZ",
+    location: "Eufaula, OK",
     stars: 5,
     text: "These guys did an amazing job. Came out to my house, had the whole thing done in a few hours. Cart runs better than it ever did with the old lead-acid. Wish I had done this years ago.",
     cart: "EZGO TXT",
   },
   {
     name: "Sandra R.",
-    location: "The Villages, FL",
+    location: "McAlester, OK",
     stars: 5,
     text: "Super professional from start to finish. The LCD monitor is a game changer — I always know exactly how much charge I have left. Installation was spotless, no mess whatsoever.",
     cart: "Club Car Precedent",
   },
   {
     name: "Dave K.",
-    location: "Scottsdale, AZ",
+    location: "Edmond, OK",
     stars: 5,
     text: "Outstanding value. $1,600 all-in and you get a battery that'll last 10+ years. The cart is noticeably faster going up hills now. 10/10 recommend.",
     cart: "Yamaha Drive2",
