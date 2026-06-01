@@ -6,6 +6,7 @@ import Compatibility from "@/components/Compatibility";
 import Gallery from "@/components/Gallery";
 import Pricing from "@/components/Pricing";
 import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Gallery />
         <Pricing />
         <Reviews />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
