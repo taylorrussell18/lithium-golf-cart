@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:\\\\Users\\\\trussell\\\\OneDrive - MVP Holdings\\\\Desktop\\\\Lithium\\\\.claude\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm install *)",
+      "Bash(xargs sed -i 's/#c9a84c/#22d3ee/g; s/#dfc27a/#67e8f9/g; s/#a8862e/#0891b2/g')",
+      "Bash(sed -i 's/⚡ Lithium Golf Cart Conversions/Lithium Golf Cart Conversions/g' app/layout.tsx)",
+      "Bash(sed -i 's/Send Message \\\\& Get Scheduled ⚡/Send Message \\\\& Get Scheduled/g' components/Contact.tsx)",
+      "Bash(sed -i 's/Book Now ⚡/Book Now/g' components/Footer.tsx)",
+      "Bash(sed -i 's/Get Scheduled Today ⚡/Get Scheduled Today/g' components/Pricing.tsx)",
+      "Bash(git init *)",
+      "Bash(echo 'node_modules/ *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
