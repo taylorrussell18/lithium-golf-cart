@@ -29,7 +29,7 @@ export default function Navbar() {
         <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 group">
           <div className="text-left">
             <span className="font-playfair text-white text-lg leading-tight block tracking-wide">
-              Lithium
+              Mobile Golf Carts
             </span>
             <span className="text-[#22d3ee] text-xs tracking-[0.15em] uppercase font-inter font-medium block -mt-0.5">
               Golf Cart Conversions

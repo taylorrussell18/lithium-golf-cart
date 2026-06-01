@@ -11,7 +11,7 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Lithium Golf Cart Conversions <onboarding@resend.dev>",
+        from: "Mobile Golf Carts <onboarding@resend.dev>",
         to: "G.russellcarts@gmail.com",
         reply_to: email || undefined,
         subject: `New Conversion Inquiry — ${name}`,
@@ -28,7 +28,7 @@ export async function POST(req: Request) {
               <tr><td style="padding: 8px 0; color: #666;">Location</td><td style="padding: 8px 0;">${location}</td></tr>
             </table>
             ${message ? `<div style="margin-top: 16px; padding: 16px; background: #f0f5ff; border-radius: 8px;"><strong>Message:</strong><p style="margin: 8px 0 0;">${message}</p></div>` : ""}
-            <p style="margin-top: 24px; color: #999; font-size: 12px;">Sent from your Lithium Golf Cart Conversions website</p>
+            <p style="margin-top: 24px; color: #999; font-size: 12px;">Sent from your Mobile Golf Carts website</p>
           </div>
         `,
       }),

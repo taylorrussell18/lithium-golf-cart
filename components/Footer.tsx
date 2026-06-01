@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-playfair text-white text-xl font-bold">Lithium</span>
+              <span className="font-playfair text-white text-xl font-bold">Mobile Golf Carts</span>
             </div>
             <p className="font-inter text-white/40 text-xs leading-relaxed">Golf Cart Conversions</p>
             <p className="font-inter text-[#22d3ee]/70 text-sm mt-3 italic font-light">
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-white/25 text-xs font-inter">
-          <p>© {year} Lithium Golf Cart Conversions. All rights reserved.</p>
+          <p>© {year} Mobile Golf Carts. All rights reserved.</p>
           <p>Premium mobile battery service</p>
         </div>
       </div>
