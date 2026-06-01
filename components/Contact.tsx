@@ -7,7 +7,7 @@ const CONTACT_EMAIL = "G.russellcarts@gmail.com";
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -30,14 +30,24 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Golf Cart Conversion Inquiry — ${form.name}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nCart Model: ${form.cartModel}\nLocation: ${form.location}\n\nMessage:\n${form.message}`
-    );
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    setStatus("sent");
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClass =
@@ -71,7 +81,7 @@ export default function Contact() {
               <div className="text-5xl mb-4">✅</div>
               <h3 className="font-playfair text-white text-2xl font-bold mb-2">Message Sent!</h3>
               <p className="font-inter text-white/60 text-sm">
-                Your email client should have opened with a pre-filled message. We'll be in touch shortly.
+                We received your inquiry and will be in touch shortly to confirm your install date.
               </p>
             </div>
           ) : (
@@ -108,30 +118,29 @@ export default function Contact() {
                 <textarea id="message" name="message" rows={4} placeholder="Any other info about your cart, current battery setup, or questions..." value={form.message} onChange={handleChange} className={`${inputClass} resize-none`} />
               </div>
 
+              {status === "error" && (
+                <p className="text-red-400 text-sm font-inter text-center">
+                  Something went wrong. Please try emailing us directly at{" "}
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="underline">{CONTACT_EMAIL}</a>
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-bold text-base py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-[#22d3ee]/30 hover:shadow-xl tracking-wide"
+                disabled={status === "sending"}
+                className="w-full bg-[#22d3ee] hover:bg-[#67e8f9] disabled:opacity-60 disabled:cursor-not-allowed text-[#091929] font-inter font-bold text-base py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-[#22d3ee]/30 hover:shadow-xl tracking-wide"
               >
-                Send Message & Get Scheduled
+                {status === "sending" ? "Sending..." : "Send Message & Get Scheduled"}
               </button>
 
               <p className="text-center font-inter text-white/30 text-xs">
-                Opens your email client with a pre-filled message to{" "}
+                Or email us directly at{" "}
                 <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#22d3ee]/60 hover:text-[#22d3ee] transition-colors">
                   {CONTACT_EMAIL}
                 </a>
               </p>
             </form>
           )}
-        </div>
-
-        <div className="mt-8 text-center">
-          <p className="font-inter text-white/40 text-sm">
-            Prefer to reach out directly?{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#22d3ee] hover:text-[#67e8f9] transition-colors underline underline-offset-2">
-              {CONTACT_EMAIL}
-            </a>
-          </p>
         </div>
       </div>
     </section>
