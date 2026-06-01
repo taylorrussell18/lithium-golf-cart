@@ -44,6 +44,7 @@ export default function Navbar() {
             ["Gallery", "gallery"],
             ["Pricing", "pricing"],
             ["Reviews", "reviews"],
+            ["FAQ", "faq"],
           ].map(([label, id]) => (
             <button
               key={id}
@@ -88,6 +89,7 @@ export default function Navbar() {
             ["Gallery", "gallery"],
             ["Pricing", "pricing"],
             ["Reviews", "reviews"],
+            ["FAQ", "faq"],
           ].map(([label, id]) => (
             <button
               key={id}
