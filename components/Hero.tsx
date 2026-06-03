@@ -38,6 +38,10 @@ export default function Hero() {
           >
             Lithium Conversion
           </span>
+          <br />
+          <span className="text-white/60 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">
+            Serving All of Oklahoma
+          </span>
         </h1>
 
         <p className="font-inter text-xl sm:text-2xl md:text-3xl text-white/80 font-light mb-4 tracking-wide">
