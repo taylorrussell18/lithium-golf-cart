@@ -30,13 +30,12 @@ export default function Hero() {
           className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold leading-tight mb-6"
           style={{ textShadow: "0 4px 40px rgba(0,0,0,0.5)" }}
         >
-          Mobile Golf Cart
-          <br />
+          Mobile Golf Cart{" "}
           <span
             className="text-[#22d3ee]"
             style={{ textShadow: "0 2px 20px rgba(34,211,238,0.3)" }}
           >
-            Lithium Conversion
+            <br />Lithium Conversion
           </span>
           <br />
           <span className="text-white/60 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light">
