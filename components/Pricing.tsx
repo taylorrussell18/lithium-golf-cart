@@ -84,7 +84,7 @@ export default function Pricing() {
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
-              className="bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-bold text-lg px-12 py-4 rounded shadow-xl hover:shadow-[#22d3ee]/30 hover:shadow-2xl transition-all duration-300 tracking-wide"
+              className="inline-block whitespace-nowrap bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-bold text-lg px-12 py-4 rounded shadow-xl hover:shadow-[#22d3ee]/30 hover:shadow-2xl transition-all duration-300 tracking-wide"
             >
               Get Scheduled Today
             </a>
