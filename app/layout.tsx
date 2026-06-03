@@ -76,10 +76,21 @@ const schemaData = {
       ],
       priceRange: "$1,600 - $2,000",
       image: "https://www.mobilegolfcarts.com/installs/install-completed-conversion.jpeg",
+      founder: {
+        "@type": "Person",
+        name: "Gary Russell",
+      },
       address: {
         "@type": "PostalAddress",
+        addressLocality: "Oklahoma City",
         addressRegion: "OK",
         addressCountry: "US",
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        opens: "08:00",
+        closes: "18:00",
       },
       aggregateRating: {
         "@type": "AggregateRating",

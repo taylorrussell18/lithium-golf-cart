@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const NAV_LINKS = [
   ["What's Included", "included"],
   ["Why Upgrade", "why"],
-  ["Gallery", "gallery"],
+  ["Service Area", "service-area"],
   ["Pricing", "pricing"],
   ["Reviews", "reviews"],
   ["FAQ", "faq"],
