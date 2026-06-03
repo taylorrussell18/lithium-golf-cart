@@ -53,19 +53,21 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
-            onClick={() => scrollTo("contact")}
-            className="group bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-bold text-base sm:text-lg px-10 py-4 rounded shadow-xl hover:shadow-[#22d3ee]/40 hover:shadow-2xl transition-all duration-300 tracking-wide w-full sm:w-auto"
+          <a
+            href="#contact"
+            onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}
+            className="group bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-bold text-base sm:text-lg px-10 py-4 rounded shadow-xl hover:shadow-[#22d3ee]/40 hover:shadow-2xl transition-all duration-300 tracking-wide w-full sm:w-auto text-center"
           >
             Get Scheduled Today
             <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
-          </button>
-          <button
-            onClick={() => scrollTo("included")}
-            className="border border-white/30 hover:border-[#22d3ee]/60 text-white/80 hover:text-[#22d3ee] font-inter font-medium text-base px-8 py-4 rounded transition-all duration-300 tracking-wide w-full sm:w-auto"
+          </a>
+          <a
+            href="#included"
+            onClick={(e) => { e.preventDefault(); scrollTo("included"); }}
+            className="border border-white/30 hover:border-[#22d3ee]/60 text-white/80 hover:text-[#22d3ee] font-inter font-medium text-base px-8 py-4 rounded transition-all duration-300 tracking-wide w-full sm:w-auto text-center"
           >
             See What's Included
-          </button>
+          </a>
         </div>
 
         <div className="mt-16 flex flex-wrap justify-center gap-8 text-white/40 text-sm font-inter">

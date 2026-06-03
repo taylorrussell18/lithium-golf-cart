@@ -18,9 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mobilegolfcarts.com"),
-  title: "Mobile Golf Cart Lithium Conversion | Oklahoma | Starting at $1,600",
+  title: "Golf Cart Lithium Conversion Oklahoma | Starting at $1,600",
   description:
-    "Premium mobile golf cart lithium battery conversion serving all of Oklahoma. 36V LiFePO4 105Ah installed at your home or club — battery, tray, charger & monitor included. Starting at $1,600.",
+    "Mobile golf cart lithium conversion serving Oklahoma. 36V LiFePO4 battery, tray, charger & LCD monitor installed at your home. Starting at $1,600.",
   keywords:
     "golf cart lithium battery, lithium conversion Oklahoma, EZGO lithium battery, Club Car lithium upgrade, Yamaha golf cart battery, LiFePO4 golf cart, mobile golf cart service Oklahoma",
   alternates: {

@@ -63,12 +63,13 @@ export default function Compatibility() {
               Other 36V carts may also be compatible — just reach out and we'll check.
             </p>
           </div>
-          <button
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          <a
+            href="#contact"
+            onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
             className="shrink-0 bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-semibold text-sm px-6 py-3 rounded transition-all duration-200"
           >
             Ask Us →
-          </button>
+          </a>
         </div>
       </div>
     </section>

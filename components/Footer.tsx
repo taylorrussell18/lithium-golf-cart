@@ -46,12 +46,13 @@ export default function Footer() {
                 just ask about our service radius.
               </li>
             </ul>
-            <button
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="mt-5 bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-semibold text-xs px-5 py-2.5 rounded transition-all duration-200 tracking-wide"
+            <a
+              href="#contact"
+              onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
+              className="mt-5 inline-block bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-semibold text-xs px-5 py-2.5 rounded transition-all duration-200 tracking-wide"
             >
               Book Now
-            </button>
+            </a>
           </div>
         </div>
 

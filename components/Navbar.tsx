@@ -2,6 +2,15 @@
 
 import { useState, useEffect } from "react";
 
+const NAV_LINKS = [
+  ["What's Included", "included"],
+  ["Why Upgrade", "why"],
+  ["Gallery", "gallery"],
+  ["Pricing", "pricing"],
+  ["Reviews", "reviews"],
+  ["FAQ", "faq"],
+] as const;
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +21,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
+  // Smooth-scroll on click, but keep the real href="#id" for crawlers & accessibility
+  const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
     setMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -26,7 +37,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 group">
+        {/* Logo — links to top of page */}
+        <a
+          href="#hero"
+          onClick={(e) => handleNav(e, "hero")}
+          className="flex items-center gap-2 group"
+        >
           <div className="text-left">
             <span className="font-playfair text-white text-lg leading-tight block tracking-wide">
               Mobile Golf Carts
@@ -35,37 +51,35 @@ export default function Navbar() {
               Golf Cart Conversions
             </span>
           </div>
-        </button>
+        </a>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {[
-            ["What's Included", "included"],
-            ["Why Upgrade", "why"],
-            ["Gallery", "gallery"],
-            ["Pricing", "pricing"],
-            ["Reviews", "reviews"],
-            ["FAQ", "faq"],
-          ].map(([label, id]) => (
-            <button
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          {NAV_LINKS.map(([label, id]) => (
+            <a
               key={id}
-              onClick={() => scrollTo(id)}
+              href={`#${id}`}
+              onClick={(e) => handleNav(e, id)}
               className="text-white/80 hover:text-[#22d3ee] text-sm font-inter font-medium transition-colors duration-200 tracking-wide"
             >
               {label}
-            </button>
+            </a>
           ))}
-          <button
-            onClick={() => scrollTo("contact")}
+          <a
+            href="#contact"
+            onClick={(e) => handleNav(e, "contact")}
             className="bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-semibold text-sm px-5 py-2.5 rounded transition-all duration-200 tracking-wide shadow-md hover:shadow-[#22d3ee]/30 hover:shadow-lg"
           >
             Book Now
-          </button>
+          </a>
         </nav>
 
+        {/* Mobile hamburger */}
         <button
           className="md:hidden text-white p-1"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen ? (
@@ -77,35 +91,31 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           menuOpen ? "max-h-80" : "max-h-0"
         } bg-[#091929]/98 backdrop-blur-md`}
       >
-        <div className="px-4 pb-4 flex flex-col gap-3">
-          {[
-            ["What's Included", "included"],
-            ["Why Upgrade", "why"],
-            ["Gallery", "gallery"],
-            ["Pricing", "pricing"],
-            ["Reviews", "reviews"],
-            ["FAQ", "faq"],
-          ].map(([label, id]) => (
-            <button
+        <nav className="px-4 pb-4 flex flex-col gap-3" aria-label="Mobile navigation">
+          {NAV_LINKS.map(([label, id]) => (
+            <a
               key={id}
-              onClick={() => scrollTo(id)}
+              href={`#${id}`}
+              onClick={(e) => handleNav(e, id)}
               className="text-white/80 hover:text-[#22d3ee] text-sm font-inter font-medium text-left py-2 border-b border-white/10 transition-colors"
             >
               {label}
-            </button>
+            </a>
           ))}
-          <button
-            onClick={() => scrollTo("contact")}
-            className="bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-semibold text-sm px-5 py-3 rounded mt-2 transition-colors"
+          <a
+            href="#contact"
+            onClick={(e) => handleNav(e, "contact")}
+            className="bg-[#22d3ee] hover:bg-[#67e8f9] text-[#091929] font-inter font-semibold text-sm px-5 py-3 rounded mt-2 transition-colors text-center"
           >
             Book Now
-          </button>
-        </div>
+          </a>
+        </nav>
       </div>
     </header>
   );
